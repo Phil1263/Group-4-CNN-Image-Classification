@@ -1,0 +1,35 @@
+,parameters,Base Model (Together),Model 2 - Dimi,Model 3 - Sara,Model 4 - Philippe,Model 5 - Dimi,Model 6 - Sara,Model 7 - Philippe,Model 8 - Dimi,Model 9 - Sara,Model 10 - Philippe,Model 11 - Sara,Model 12 - Together,Model 13 - Together
+Preprocessing,resizing,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
+,data augmentation,no,no,no,no,no,no,no,no,no,yes,yes,no,no
+,normalization,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no
+,one-hot encoding,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
+,preprocessing,,,,no,no,no,no,no,no,no,no,no,no
+,,,,,,,,,,,,,,
+Model architecture,Hidden dense layers,1,1,1,1,1,1,1,1,1,1,1,1,1
+,# of neurons,100,100,100,10,100,100,100,100,100,128,128,128,128
+,# of conv layers,1,2,1,3,3,2,2,2,2,6,6,0,0
+,# of maxpooling,1,2,1,2,2,2,2,2,2,2,2,0,0
+,Batch Normalization,no,no,yes,yes,no,yes,no,yes,yes,yes,yes,yes,yes
+,Drop-out,no,no,yes,no,no,yes,no,yes,yes,no,no,yes,yes
+,GlobalAveragePooling,no ,no,no,no,yes,no,no,yes,no,yes,yes,yes,yes
+,Flatten,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,no,no
+,L2 Regularizer,no,no,no,no,no,no,no,no,no,no,no,no,no
+,Padding,no,no,yes,no,no,yes,no,yes,yes,yes,yes,yes,yes
+,,,,,,,,,,,,,,
+Training,Learning Rate,"0,001","0,001","0,001","0,001","0,001","0,001","0,001","0,001","0,001","0,001","0,001","0,0005",0.00001
+,Momentum,0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def),0.0  (def)
+,Optimizer,SGD,ADAM,ADAM,RMSprop,ADAM,ADAM,ADAM,ADAM,ADAM,ADAM,ADAM,ADAM,ADAM
+,Warm-Up LR Decay,no,no,no,no,no,no,no,no,no,no,no,no,no
+,LR Scheduler,no,no,no,no,no,no,no,no,no,no,no,no,no
+,Epochs,50,50,50,50,50,50,50,50,50,50,50,50,10
+,Batch Size,512,512,512,512,512,512,256,512,64,512,64,64,16
+,Early Stopping,no,no,no,no,no,no,yes,No,Yes,No,No,No,No
+,,,,,,,,,,,,,,
+Performance,Training Accuracy,"55,80%",86.94%,"84,58%",97.70%,"69,23%",79.41%,78.96%,"64,55%","79,08%",89.92%,90.25,86.80%,88.81%
+,Training Loss,1.2606,0.3912,0.4268,0.0714,0.8797,0.5769,0.6128,"0,9969","0,5934",0.2854,0.2747,0.3846,0.3358
+,Validation Accuracy,51.02%,68.28%,"66,97%%",55.73%,"66,70%",75.27%,68.19%,58.07%,"65,95%",82.23%,84.70%,86.41%,90.08%
+,Validation Loss,1.4168,1.0835,"1,1241",3.5517,0.9550,0.7297,0.9679,"1,183","1,0664","0,6082",0.4866,0.4431,0.3009
+,Test Accuracy,50%,68.37%,"65,96%",55.3%,"67,25%",75.1%,68.5%,"58,99%","75,72%","82,00%","84,00%",86.40%,"90,00%"
+,Time,49s,1m,1m,1m,1m,1m,35s,1m,1m,6m,9m,5m,4m
+,,,,,,,,,,,,,,
+Done:,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
